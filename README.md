@@ -13,10 +13,21 @@ To start the turtlesim, I entered the following command (ros2 run turtlesim turt
 ![Screenshot from 2022-09-21 15-17-09](https://user-images.githubusercontent.com/86156093/191428482-9a045ccc-fb34-4a8e-a5db-e5b8bd706768.png)
 The simulator window appeated with a random turtle in the center.
 
-![Screenshot from 2022-09-21 15-17-14](https://user-images.githubusercontent.com/86156093/191428773-f2e65838-b28a-4f4d-963f-7d232b7d43af.png)
+![Screenshot from 2022-09-21 15-17-14](https://user-images.githubusercontent.com/86156093/192296185-590275c2-ae29-455b-b860-80d4d3682754.png)
+
+code for using turtelism
+
+![Screenshot from 2022-09-21 15-17-09](https://user-images.githubusercontent.com/86156093/192296607-eb060f72-dfd1-4d3b-b233-bf5c6d6757a2.png)
+
+
+code for using rqt 
 
 
 
+![Screenshot from 2022-09-21 14-33-57](https://user-images.githubusercontent.com/86156093/192297230-3d80810b-bbf0-4190-9e34-c036940d350e.png)
 
+working turtlesim
+![Screenshot from 2022-09-21 15-17-09](https://user-images.githubusercontent.com/86156093/192296607-eb060f72-dfd1-4d3b-b233-bf5c6d6757a2.png)
 
-
+working of rqt
+![Screenshot from 2022-09-20 11-55-13](https://user-images.githubusercontent.com/86156093/192297497-40ba4a86-6d79-4389-8142-319961e9365b.png)
