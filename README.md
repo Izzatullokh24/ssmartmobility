@@ -15,12 +15,12 @@ The simulator window appeated with a random turtle in the center.
 
 ![Screenshot from 2022-09-21 15-17-14](https://user-images.githubusercontent.com/86156093/192296185-590275c2-ae29-455b-b860-80d4d3682754.png)
 
-#Start turtlesim
+# Start turtlesim
 code for using turtelism
 
 ![Screenshot from 2022-09-21 15-17-09](https://user-images.githubusercontent.com/86156093/192296607-eb060f72-dfd1-4d3b-b233-bf5c6d6757a2.png)
 
-#Use of rqt
+# Use of rqt
 code for using rqt 
 
 Install rqt
@@ -35,6 +35,21 @@ working of rqt
 
 ![Screenshot from 2022-09-21 14-34-34](https://user-images.githubusercontent.com/86156093/192297874-6347c4ca-6a53-45d5-abff-10cbd9018d0f.png)
 
-#Using colcon to build packages
+# Using colcon to build packages
+sudo apt install python3-colcon-common-extensions
+First, create a directory (ros2_ws) to contain our workspace:
+![Screenshot from 2022-09-27 11-10-22](https://user-images.githubusercontent.com/86156093/192686827-89932b20-8250-4aa1-b80b-18d7fd1d606a.png)
+
+![Screenshot from 2022-09-27 11-10-29](https://user-images.githubusercontent.com/86156093/192687008-1765501e-c664-4f8c-8307-717c606f3172.png)
+
+![Screenshot from 2022-09-27 11-10-33](https://user-images.githubusercontent.com/86156093/192687045-0ba9ffe1-5b59-4440-80f2-a4a57225501c.png)
+
+![Screenshot from 2022-09-27 11-10-45](https://user-images.githubusercontent.com/86156093/192687130-601bc2f8-1429-441d-aab2-905fb9d8f4f1.png)
+
+
+
+## build the workspace
+
+![Screenshot from 2022-09-27 11-10-45](https://user-images.githubusercontent.com/86156093/192687168-17f7994d-3eba-46ad-8710-89e824d3fe69.png)
 
 
