@@ -1,6 +1,6 @@
 # smartmobility
 
-Firstly, I wrote a code(sudo apt update
+`sudo apt update`
 
 sudo apt install ros-humble-turtlesim) to install the turtlesim humble versio. And then I tried to check the package is installed or not. then terminal returned the comman 
 turtlesim draw_square
@@ -16,14 +16,14 @@ The simulator window appeated with a random turtle in the center.
 ![Screenshot from 2022-09-21 15-17-14](https://user-images.githubusercontent.com/86156093/192296185-590275c2-ae29-455b-b860-80d4d3682754.png)
 
 # Start turtlesim
-(ros2 run turtlesim turtlesim_node)
+`ros2 run turtlesim turtlesim_node`
 
 ![Screenshot from 2022-09-21 15-17-09](https://user-images.githubusercontent.com/86156093/192296607-eb060f72-dfd1-4d3b-b233-bf5c6d6757a2.png)
 
 # Use of rqt
 code for using rqt 
 
-Install rqt
+`Install rqt`
 
 ![Screenshot from 2022-09-21 14-33-57](https://user-images.githubusercontent.com/86156093/192297230-3d80810b-bbf0-4190-9e34-c036940d350e.png)
 
@@ -36,7 +36,7 @@ working of rqt
 ![Screenshot from 2022-09-21 14-34-34](https://user-images.githubusercontent.com/86156093/192297874-6347c4ca-6a53-45d5-abff-10cbd9018d0f.png)
 
 # Using colcon to build packages
-sudo apt install python3-colcon-common-extensions
+`sudo apt install python3-colcon-common-extensions`
 
 First, create a directory (ros2_ws) to contain our workspace:
 
@@ -62,7 +62,7 @@ First, create a directory (ros2_ws) to contain our workspace:
 ![Screenshot from 2022-09-27 11-10-51](https://user-images.githubusercontent.com/86156093/192687507-017de4b9-bd3e-4118-8ae5-14c702c1a58f.png)
 
 # Run tests
-## colcon test
+ `colcon test`
 
 
 ![Screenshot from 2022-09-27 11-10-59](https://user-images.githubusercontent.com/86156093/192687630-b2326cf5-de1d-43c6-83d2-33a55e87b885.png)
@@ -74,7 +74,7 @@ First, create a directory (ros2_ws) to contain our workspace:
 
 ![Screenshot from 2022-09-27 11-11-08](https://user-images.githubusercontent.com/86156093/192688257-7a441539-82e1-47e9-8c74-b391750a3c97.png)
 # Create a package
-ros2 pkg create --build-type ament_python py_pubsub
+`ros2 pkg create --build-type ament_python py_pubsub`
 ![Screenshot from 2022-09-27 11-11-08](https://user-images.githubusercontent.com/86156093/192688972-dc3d2e99-81c9-4fe0-aab9-46d35383f317.png)
 
 ![Screenshot from 2022-09-27 11-11-16](https://user-images.githubusercontent.com/86156093/192689160-7b45501e-1703-4e23-aec7-afcda02ce7f2.png)
