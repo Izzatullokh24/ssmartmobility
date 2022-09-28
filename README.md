@@ -1,6 +1,6 @@
 # smartmobility
 
-`sudo apt update`
+'''sudo apt update'''
 
 sudo apt install ros-humble-turtlesim) to install the turtlesim humble versio. And then I tried to check the package is installed or not. then terminal returned the comman 
 turtlesim draw_square
