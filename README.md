@@ -98,26 +98,11 @@ First, create a directory (ros2_ws) to contain our workspace:
 
 
 
-![Screenshot from 2022-09-27 11-11-03](https://user-images.githubusercontent.com/86156093/192687666-7b8574bb-ecf9-4d4c-abd7-462da5e2a256.png)
-
-
-![Screenshot from 2022-09-27 11-11-08](https://user-images.githubusercontent.com/86156093/192688257-7a441539-82e1-47e9-8c74-b391750a3c97.png)
 # Create a package
 `ros2 pkg create --build-type ament_python py_pubsub`
 ![Screenshot from 2022-09-27 11-11-08](https://user-images.githubusercontent.com/86156093/192688972-dc3d2e99-81c9-4fe0-aab9-46d35383f317.png)
 
 ![Screenshot from 2022-09-27 11-11-16](https://user-images.githubusercontent.com/86156093/192689160-7b45501e-1703-4e23-aec7-afcda02ce7f2.png)
 
-![Screenshot from 2022-09-27 11-43-20](https://user-images.githubusercontent.com/86156093/192689196-f481e3c2-7cf7-402c-b52a-20d45478fdde.png)
-
-![Screenshot from 2022-09-27 11-43-29](https://user-images.githubusercontent.com/86156093/192689234-2d7f67f0-411a-495b-9710-67296c645158.png)
-
-![Screenshot from 2022-09-27 11-43-35](https://user-images.githubusercontent.com/86156093/192689296-ca25d193-2747-407b-8e4a-7526f92515d4.png)
-
-
-![Screenshot from 2022-09-27 11-43-46](https://user-images.githubusercontent.com/86156093/192689336-c63746df-b8f5-4d71-a255-5810ec0f26ae.png)
-
-
-![Screenshot from 2022-09-27 11-51-38](https://user-images.githubusercontent.com/86156093/192689368-bf3e3f57-43cf-42b8-bfe8-ff5d4faba150.png)
 
 
