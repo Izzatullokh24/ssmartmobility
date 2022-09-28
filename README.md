@@ -1,13 +1,17 @@
 # smartmobility
 
-'''sudo apt update'''
+'sudo apt update'
 
-sudo apt install ros-humble-turtlesim) to install the turtlesim humble versio. And then I tried to check the package is installed or not. then terminal returned the comman 
+'"sudo apt install ros-humble-turtlesim"
+
+
+to install the turtlesim humble versio. And then I tried to check the package is installed or not. then terminal returned the command
+'''
 turtlesim draw_square
 turtlesim mimic
 turtlesim turtle_teleop_key
 turtlesim turtlesim_node
-
+'''
 To start the turtlesim, 
 'ros2 run turtlesim turtlesim_node'
 
