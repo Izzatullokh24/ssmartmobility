@@ -1,6 +1,6 @@
 # smartmobility
 
-'sudo apt update'
+```sudo apt update```
 
 '"sudo apt install ros-humble-turtlesim"
 
