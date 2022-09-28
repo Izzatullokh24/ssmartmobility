@@ -28,7 +28,11 @@ ros2 run turtlesim turtlesim_node
 
 
 ![Screenshot from 2022-09-21 15-17-09](https://user-images.githubusercontent.com/86156093/191428482-9a045ccc-fb34-4a8e-a5db-e5b8bd706768.png)
+
+
 The simulator window appeated with a random turtle in the center.
+
+
 
 ![Screenshot from 2022-09-21 15-17-14](https://user-images.githubusercontent.com/86156093/192296185-590275c2-ae29-455b-b860-80d4d3682754.png)
 
