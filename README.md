@@ -37,7 +37,10 @@ working of rqt
 
 # Using colcon to build packages
 sudo apt install python3-colcon-common-extensions
+
 First, create a directory (ros2_ws) to contain our workspace:
+
+
 ![Screenshot from 2022-09-27 11-10-22](https://user-images.githubusercontent.com/86156093/192686827-89932b20-8250-4aa1-b80b-18d7fd1d606a.png)
 
 ![Screenshot from 2022-09-27 11-10-29](https://user-images.githubusercontent.com/86156093/192687008-1765501e-c664-4f8c-8307-717c606f3172.png)
@@ -51,5 +54,24 @@ First, create a directory (ros2_ws) to contain our workspace:
 ## build the workspace
 
 ![Screenshot from 2022-09-27 11-10-45](https://user-images.githubusercontent.com/86156093/192687168-17f7994d-3eba-46ad-8710-89e824d3fe69.png)
+
+
+![Screenshot from 2022-09-27 11-10-48](https://user-images.githubusercontent.com/86156093/192687447-7e80c15a-82a3-4060-8ad6-a53122640018.png)
+
+
+![Screenshot from 2022-09-27 11-10-51](https://user-images.githubusercontent.com/86156093/192687507-017de4b9-bd3e-4118-8ae5-14c702c1a58f.png)
+
+# Run tests
+## colcon test
+
+
+![Screenshot from 2022-09-27 11-10-59](https://user-images.githubusercontent.com/86156093/192687630-b2326cf5-de1d-43c6-83d2-33a55e87b885.png)
+
+
+
+![Screenshot from 2022-09-27 11-11-03](https://user-images.githubusercontent.com/86156093/192687666-7b8574bb-ecf9-4d4c-abd7-462da5e2a256.png)
+
+
+![Screenshot from 2022-09-27 11-11-08](https://user-images.githubusercontent.com/86156093/192688257-7a441539-82e1-47e9-8c74-b391750a3c97.png)
 
 
