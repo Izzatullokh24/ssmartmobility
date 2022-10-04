@@ -250,7 +250,9 @@ Summary: 1 package finished [1.68s]
   1 package had stderr output: py_srvcli
 izzatullokh@izzatullokh-virtual-machine:~/ros2_1_ws$ . install/setup.bash
 izzatullokh@izzatullokh-virtual-machine:~/ros2_1_ws$ ros2 run py_srvcli service
-[INFO] [1664862041.390463826] [minimal_servi
+[INFO] [1664862041.390463826] [minimal_service]: Incoming request
+a: 2 b: 3
+
 ```
 # 4.2 build and run the client
 
