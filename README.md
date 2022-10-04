@@ -105,4 +105,8 @@ First, create a directory (ros2_ws) to contain our workspace:
 ![Screenshot from 2022-09-27 11-11-16](https://user-images.githubusercontent.com/86156093/192689160-7b45501e-1703-4e23-aec7-afcda02ce7f2.png)
 
 
+# WEEK 5
+ ## first, open a new terminal and source the ros2 
+ ```# Replace ".bash" with your shell if you're not using bash # Possible values are: setup.bash, setup.sh, setup.zsh
+source /opt/ros/humble/setup.bash```
 
