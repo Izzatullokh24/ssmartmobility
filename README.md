@@ -232,6 +232,9 @@ entry_points={
 },
 ```
 # 4.1 Build and run the Service 
+
+![Screenshot from 2022-10-04 14-41-20](https://user-images.githubusercontent.com/86156093/193744140-cdc33db8-24c7-4317-a372-0b454af40fbf.png)
+
 ```
 izzatullokh@izzatullokh-virtual-machine:~$ cd ros2_1_ws
 izzatullokh@izzatullokh-virtual-machine:~/ros2_1_ws$ rosdep install -i --from-path src --rosdistro humble -y
@@ -255,6 +258,9 @@ a: 2 b: 3
 
 ```
 # 4.2 build and run the client
+
+![Screenshot from 2022-10-04 14-46-37](https://user-images.githubusercontent.com/86156093/193744007-bd3cbb78-caae-4b0c-98ea-dbe91ffebf74.png)
+
 
 ```
 @izzatullokh-virtual-machine:~/ros2_1_ws$ # Replace ".bash" with your shell if you're not using bash
