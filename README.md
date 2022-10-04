@@ -231,7 +231,49 @@ entry_points={
     ],
 },
 ```
-# 4 Build and run
+# 4.1 Build and run the Service 
 ```
-rosdep install -i --from-path src --rosdistro humble -y
+izzatullokh@izzatullokh-virtual-machine:~$ cd ros2_1_ws
+izzatullokh@izzatullokh-virtual-machine:~/ros2_1_ws$ rosdep install -i --from-path src --rosdistro humble -y
+
+#All required rosdeps installed successfully
+izzatullokh@izzatullokh-virtual-machine:~/ros2_1_ws$ 
+izzatullokh@izzatullokh-virtual-machine:~/ros2_1_ws$ colcon build --packages-select py_srvcli
+Starting >>> py_srvcli
+--- stderr: py_srvcli                   
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+---
+Finished <<< py_srvcli [1.32s]
+
+Summary: 1 package finished [1.68s]
+  1 package had stderr output: py_srvcli
+izzatullokh@izzatullokh-virtual-machine:~/ros2_1_ws$ . install/setup.bash
+izzatullokh@izzatullokh-virtual-machine:~/ros2_1_ws$ ros2 run py_srvcli service
+[INFO] [1664862041.390463826] [minimal_servi
 ```
+# 4.2 build and run the client
+
+```
+@izzatullokh-virtual-machine:~/ros2_1_ws$ # Replace ".bash" with your shell if you're not using bash
+# Possible values are: setup.bash, setup.sh, setup.zsh
+source /opt/ros/humble/setup.bash
+izzatullokh@izzatullokh-virtual-machine:~/ros2_1_ws$ rosdep install -i --from-path src --rosdistro humble -y
+#All required rosdeps installed successfully
+izzatullokh@izzatullokh-virtual-machine:~/ros2_1_ws$ colcon build --packages-select py_srvcli
+Starting >>> py_srvcli
+--- stderr: py_srvcli                   
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+---
+Finished <<< py_srvcli [1.17s]
+
+Summary: 1 package finished [1.39s]
+  1 package had stderr output: py_srvcli
+izzatullokh@izzatullokh-virtual-machine:~/ros2_1_ws$ . install/setup.bash
+izzatullokh@izzatullokh-virtual-machine:~/ros2_1_ws$ ros2 run py_srvcli client 2 3
+[INFO] [1664862041.103507627] [minimal_client_async]: service not available, waiting again...
+[INFO] [1664862041.391779279] [minimal_client_async]: Result of add_two_ints: for 2 + 3 = 5
+izzatullokh@izzatullokh-virtual-machine:~/ros2_1_ws$ 
+```
+
