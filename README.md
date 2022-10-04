@@ -287,7 +287,7 @@ izzatullokh@izzatullokh-virtual-machine:~/ros2_1_ws$
 
 
 # Action
-## terminal fo4 turtlesim
+## terminal for turtlesim
 ```
 izzatullokh@izzatullokh-virtual-machine:~$ # Replace ".bash" with your shell if you're not using bash
 # Possible values are: setup.bash, setup.sh, setup.zsh
