@@ -91,7 +91,9 @@ First, create a directory (ros2_ws) to contain our workspace:
 ![Screenshot from 2022-09-27 11-10-51](https://user-images.githubusercontent.com/86156093/192687507-017de4b9-bd3e-4118-8ae5-14c702c1a58f.png)
 
 # Run tests
- `colcon test`
+ ```
+ colcon test
+ ```
 
 
 ![Screenshot from 2022-09-27 11-10-59](https://user-images.githubusercontent.com/86156093/192687630-b2326cf5-de1d-43c6-83d2-33a55e87b885.png)
@@ -99,7 +101,9 @@ First, create a directory (ros2_ws) to contain our workspace:
 
 
 # Create a package
-`ros2 pkg create --build-type ament_python py_pubsub`
+```
+ros2 pkg create --build-type ament_python py_pubsub
+```
 ![Screenshot from 2022-09-27 11-11-08](https://user-images.githubusercontent.com/86156093/192688972-dc3d2e99-81c9-4fe0-aab9-46d35383f317.png)
 
 ![Screenshot from 2022-09-27 11-11-16](https://user-images.githubusercontent.com/86156093/192689160-7b45501e-1703-4e23-aec7-afcda02ce7f2.png)
@@ -111,5 +115,123 @@ First, create a directory (ros2_ws) to contain our workspace:
  
  
  
- ```ros2 pkg create --build-type ament_python py_srvcli --dependencies rclpy example_interfaces```
+ ```
+ ros2 pkg create --build-type ament_python py_srvcli --dependencies rclpy example_interfaces
+ ```
+### by entering this command, all its necessary files and folders
+## 1.2 update the package.xml file
+```
+<description>Python client server tutorial</description>
+<maintainer email="izzatullokhmail.com">Izzatullokh</maintainer>
+<license>Apache License 2.0</license>
+```
+## 1.3 update setup.py file
+```
+      maintainer='izzatullokh',
+    maintainer_email='izzatullokh@gmail.com',
+    description='Python client server tutorial',
+    license='Apache License 2.0',
+    
+ ```
+ 
+# 2. Write the service node
+ I created a new file  service_member_function.py Inside the ros2_1_ws/src/py_srvcli/py_srvcli directory, create a new and  pasted the following code within: 
+ 
+ ```
+ from example_interfaces.srv import AddTwoInts
 
+import rclpy
+from rclpy.node import Node
+
+
+class MinimalService(Node):
+
+    def __init__(self):
+        super().__init__('minimal_service')
+        self.srv = self.create_service(AddTwoInts, 'add_two_ints', self.add_two_ints_callback)
+
+    def add_two_ints_callback(self, request, response):
+        response.sum = request.a + request.b
+        self.get_logger().info('Incoming request\na: %d b: %d' % (request.a, request.b))
+
+        return response
+
+
+def main():
+    rclpy.init()
+
+    minimal_service = MinimalService()
+
+    rclpy.spin(minimal_service)
+
+    rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()
+    
+   ```
+   
+ ## Next step is adding  the following line between the 'console_scripts': brackets:
+ 
+ ```
+ 'service = py_srvcli.service_member_function:main',
+ ```
+# 3 Write the client node
+## as same the last code I created a file called 
+client_member_function.py and wrote the following code inside of it
+```
+import sys
+
+from example_interfaces.srv import AddTwoInts
+import rclpy
+from rclpy.node import Node
+
+
+class MinimalClientAsync(Node):
+
+    def __init__(self):
+        super().__init__('minimal_client_async')
+        self.cli = self.create_client(AddTwoInts, 'add_two_ints')
+        while not self.cli.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('service not available, waiting again...')
+        self.req = AddTwoInts.Request()
+
+    def send_request(self, a, b):
+        self.req.a = a
+        self.req.b = b
+        self.future = self.cli.call_async(self.req)
+        rclpy.spin_until_future_complete(self, self.future)
+        return self.future.result()
+
+
+def main():
+    rclpy.init()
+
+    minimal_client = MinimalClientAsync()
+    response = minimal_client.send_request(int(sys.argv[1]), int(sys.argv[2]))
+    minimal_client.get_logger().info(
+        'Result of add_two_ints: for %d + %d = %d' %
+        (int(sys.argv[1]), int(sys.argv[2]), response.sum))
+
+    minimal_client.destroy_node()
+    rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()
+```
+### Like the service node, you also have to add an entry point to be able to run the client node
+
+```
+entry_points={
+    'console_scripts': [
+        'service = py_srvcli.service_member_function:main',
+        'client = py_srvcli.client_member_function:main',
+    ],
+},
+```
+# 4 Build and run
+```
+rosdep install -i --from-path src --rosdistro humble -y
+```
