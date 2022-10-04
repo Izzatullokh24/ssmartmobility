@@ -106,7 +106,10 @@ First, create a directory (ros2_ws) to contain our workspace:
 
 
 # WEEK 5
- ## first, open a new terminal and source the ros2 
- ```# Replace ".bash" with your shell if you're not using bash # Possible values are: setup.bash, setup.sh, setup.zsh
-source /opt/ros/humble/setup.bash```
+ ## first, open a new terminal and source the ros2 and then navigate tothe ros2_1_ws in my case  and recall the src directory
+ ## 1. create a package 
+ 
+ 
+ 
+ ```ros2 pkg create --build-type ament_python py_srvcli --dependencies rclpy example_interfaces```
 
