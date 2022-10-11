@@ -1061,6 +1061,8 @@ izzatullokh@izzatullokh-virtual-machine:~$
 ros2 run turtlesim turtlesim_node
 ```
 ## Messages on the rqt_console
+![Screenshot from 2022-10-11 13-47-55](https://user-images.githubusercontent.com/86156093/195003170-43925cd4-1df6-40cd-9ffa-0576edf4cffb.png)
+
 
 I entered the following command:
 ```
