@@ -1130,4 +1130,29 @@ Warning: Ignoring XDG_SESSION_TYPE=wayland on Gnome. Use QT_QPA_PLATFORM=wayland
 
 ```
 
+# Running a Launch File
+## Open a new terminal and run:
+
+```
+ros2 launch turtlesim multisim.launch.py
+
+```
+## This command will run the following launch file
+
+```
+# turtlesim/launch/multisim.launch.py
+
+from launch import LaunchDescription
+import launch_ros.actions
+
+def generate_launch_description():
+    return LaunchDescription([
+        launch_ros.actions.Node(
+            namespace= "turtlesim1", package='turtlesim', executable='turtlesim_node', output='screen'),
+        launch_ros.actions.Node(
+            namespace= "turtlesim2", package='turtlesim', executable='turtlesim_node', output='screen'),
+    ])
+
+```
+## control tertelism nodes
 
