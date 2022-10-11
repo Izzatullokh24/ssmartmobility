@@ -1139,6 +1139,9 @@ ros2 launch turtlesim multisim.launch.py
 ```
 ## This command will run the following launch file
 
+![Screenshot from 2022-10-11 13-47-45](https://user-images.githubusercontent.com/86156093/195003067-4a7e6f57-082d-43c7-a95c-ac9faa33eecd.png)
+
+
 ```
 # turtlesim/launch/multisim.launch.py
 
@@ -1155,4 +1158,19 @@ def generate_launch_description():
 
 ```
 ## control tertelism nodes
+
+```
+ros2 topic pub  /turtlesim1/turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.8}}"
+
+```
+![Screenshot from 2022-10-11 13-47-33](https://user-images.githubusercontent.com/86156093/195002898-dda7ee55-ad18-402e-9fd2-80cfee04b97b.png)
+
+```
+
+ros2 topic pub  /turtlesim2/turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: -1.8}}"
+
+```
+![Screenshot from 2022-10-11 13-47-40](https://user-images.githubusercontent.com/86156093/195002993-8be49986-5bfd-4565-9d11-9411e8d9dc3b.png)
+
+
 
