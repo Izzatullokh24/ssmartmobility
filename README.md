@@ -1050,3 +1050,84 @@ Goal finished with status: SUCCEEDED
 izzatullokh@izzatullokh-virtual-machine:~$ 
 
 ```
+
+# Using rqt_console to view logs
+### source ROS 2
+## Start rqt_console in a new terminal with the following command:
+
+![Screenshot from 2022-10-11 11-06-03](https://user-images.githubusercontent.com/86156093/194981022-e6cc30fd-c689-43b5-af26-80768e81036a.png)
+## Now start turtlesim in a new terminal with the following command:
+```
+ros2 run turtlesim turtlesim_node
+```
+## Messages on the rqt_console
+
+I entered the following command:
+```
+ros2 topic pub
+```
+and the terminal will return following commands:
+```
+source /opt/ros/humble/setup.bash
+izzatullokh@izzatullokh-virtual-machine:~$ ros2 topic pub
+usage: ros2 topic pub [-h] [-r N] [-p N] [-1 | -t TIMES] [-w WAIT_MATCHING_SUBSCRIPTIONS] [--keep-alive N]
+                      [-n NODE_NAME]
+                      [--qos-profile {unknown,system_default,sensor_data,services_default,parameters,parameter_events,action_status_default}]
+                      [--qos-depth N] [--qos-history {system_default,keep_last,keep_all,unknown}]
+                      [--qos-reliability {system_default,reliable,best_effort,unknown}]
+                      [--qos-durability {system_default,transient_local,volatile,unknown}]
+                      topic_name message_type [values]
+ros2 topic pub: error: the following arguments are required: topic_name, message_type
+izzatullokh@izzatullokh-virtual-machine:~$ ros2 topic pub -r 1 /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0,y: 0.0,z: 0.0}}"
+publisher: beginning loop
+publishing #1: geometry_msgs.msg.Twist(linear=geometry_msgs.msg.Vector3(x=2.0, y=0.0, z=0.0), angular=geometry_msgs.msg.Vector3(x=0.0, y=0.0, z=0.0))
+
+publishing #2: geometry_msgs.msg.Twist(linear=geometry_msgs.msg.Vector3(x=2.0, y=0.0, z=0.0), angular=geometry_msgs.msg.Vector3(x=0.0, y=0.0, z=0.0))
+
+publishing #3: geometry_msgs.msg.Twist(linear=geometry_msgs.msg.Vector3(x=2.0, y=0.0, z=0.0), angular=geometry_msgs.msg.Vector3(x=0.0, y=0.0, z=0.0))
+
+publishing #4: geometry_msgs.msg.Twist(linear=geometry_msgs.msg.Vector3(x=2.0, y=0.0, z=0.0), angular=geometry_msgs.msg.Vector3(x=0.0, y=0.0, z=0.0))
+
+publishing #5: geometry_msgs.msg.Twist(linear=geometry_msgs.msg.Vector3(x=2.0, y=0.0, z=0.0), angular=geometry_msgs.msg.Vector3(x=0.0, y=0.0, z=0.0))
+
+publishing #6: geometry_msgs.msg.Twist(linear=geometry_msgs.msg.Vector3(x=2.0, y=0.0, z=0.0), angular=geometry_msgs.msg.Vector3(x=0.0, y=0.0, z=0.0))
+
+publishing #7: geometry_msgs.msg.Twist(linear=geometry_msgs.msg.Vector3(x=2.0, y=0.0, z=0.0), angular=geometry_msgs.msg.Vector3(x=0.0, y=0.0, z=0.0))
+
+publishing #8: geometry_msgs.msg.Twist(linear=geometry_msgs.msg.Vector3(x=2.0, y=0.0, z=0.0), angular=geometry_msgs.msg.Vector3(x=0.0, y=0.0, z=0.0))
+
+publishing #9: geometry_msgs.msg.Twist(linear=geometry_msgs.msg.Vector3(x=2.0, y=0.0, z=0.0), angular=geometry_msgs.msg.Vector3(x=0.0, y=0.0, z=0.0))
+
+```
+## setup
+```
+izzatullokh@izzatullokh-virtual-machine:~$ # Replace ".bash" with your shell if you're not using bash
+# Possible values are: setup.bash, setup.sh, setup.zsh
+source /opt/ros/humble/setup.bash
+izzatullokh@izzatullokh-virtual-machine:~$ ros2 run rqt_console rqt_console
+
+```
+![Screenshot from 2022-10-11 11-20-11](https://user-images.githubusercontent.com/86156093/194982589-ec05a75a-b08f-4e74-82ee-98c19e0a162e.png)
+
+
+## setup
+
+```
+~$ ros2 run turtlesim turtlesim_node
+
+Warning: Ignoring XDG_SESSION_TYPE=wayland on Gnome. Use QT_QPA_PLATFORM=wayland to run on Wayland anyway.
+[INFO] [1665453541.629632638] [turtlesim]: Starting turtlesim with node name /turtlesim
+[INFO] [1665453541.698312815] [turtlesim]: Spawning turtle [turtle1] at x=[5.544445], y=[5.544445], theta=[0.000000]
+[WARN] [1665453611.598193384] [turtlesim]: Oh no! I hit the wall! (Clamping from [x=11.112445, y=5.544445])
+[WARN] [1665453611.614708689] [turtlesim]: Oh no! I hit the wall! (Clamping from [x=11.120889, y=5.544445])
+[WARN] [1665453611.630719307] [turtlesim]: Oh no! I hit the wall! (Clamping from [x=11.120889, y=5.544445])
+[WARN] [1665453611.645952505] [turtlesim]: Oh no! I hit the wall! (Clamping from [x=11.120889, y=5.544445])
+[WARN] [1665453611.661930110] [turtlesim]: Oh no! I hit the wall! (Clamping from [x=11.120889, y=5.544445])
+[WARN] [1665453611.677595772] [turtlesim]: Oh no! I hit the wall! (Clamping from [x=11.120889, y=5.544445])
+[WARN] [1665453611.694433675] [turtlesim]: Oh no! I hit the wall! (Clamping from [x=11.120889, y=5.544445])
+[WARN] [1665453611.710257479] [turtlesim]: Oh no! I hit the wall! (Clamping from [x=11.120889, y=5.544445])
+[WARN] [1665453611.726236299] [turtlesim]: Oh no! I hit the wall! (Clamping from [x=11.120889, y=
+
+```
+
+
